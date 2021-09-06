@@ -116,9 +116,6 @@ function strConcat(string memory _a, string memory _b) internal pure returns (st
     string memory traitsAttributes = "";
 
     for (uint i=0;i<LoogieTraits[tokenId].length;i++){
-        if (i>0){
-          traitsAttributes = strConcat(traitsAttributes,",");
-        }
         traitsAttributes = strConcat(traitsAttributes,'{"value":"');
         traitsAttributes = strConcat(traitsAttributes,LoogieTraits[tokenId][i].getDescription());
         traitsAttributes = strConcat(traitsAttributes,'"}');
